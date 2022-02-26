@@ -18,6 +18,10 @@ async function handleRequest(request) {
           Accept: 'Accept: application/vnd.github.v3+json',
           'User-Agent': 'gh-starred-repos-feed/1.0',
         },
+        cf: {
+          cacheTtl: 300,
+          cacheEverything: true,
+        },
       },
     );
     const json = await response.json();
@@ -60,7 +64,7 @@ async function handleRequest(request) {
     return new Response(feedResponse, {
       headers: {
         'content-type': `${feedMapping[format].type}; charset=utf-8`,
-        'cache-control': 'public, max-age=60, s-maxage=60',
+        'cache-control': 'public, max-age=300, s-maxage=300',
       },
     });
   }
