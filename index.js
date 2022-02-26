@@ -33,11 +33,13 @@ async function handleRequest(request) {
     });
     json.forEach(repo => {
       feed.addItem({
-        title: `${repo.full_name} - ${repo.description}`,
+        title: `${repo.full_name}${
+          repo.description ? ` - ${repo.description}` : ''
+        }`,
         id: repo.id,
         link: repo.html_url,
         description: repo.description,
-        content: `<p>${repo.description}</p><p>⭐ ${repo.stargazers_count} 🔱 ${repo.forks_count}</p>`,
+        content: `⭐ ${repo.stargazers_count}  🔱 ${repo.forks_count}`,
         date: new Date(), // always latest
         author: [
           {
