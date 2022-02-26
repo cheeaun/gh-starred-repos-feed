@@ -38,6 +38,7 @@ async function handleRequest(request) {
         link: repo.html_url,
         description: repo.description,
         content: `<p>${repo.description}</p><p>⭐ ${repo.stargazers_count} 🔱 ${repo.forks_count}</p>`,
+        date: new Date(), // always latest
         author: [
           {
             name: repo.owner.login,
