@@ -1,0 +1,11 @@
+{
+  "name": "gh-starred-repos-feed",
+  "version": "1.0.0",
+  "description": "A Cloudflare Worker that returns the starred repos of a GitHub user as a RSS feed",
+  "main": "index.js",
+  "author": "Lim Chee Aun <cheeaun@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "feed": "~4.2.2"
+  }
+}

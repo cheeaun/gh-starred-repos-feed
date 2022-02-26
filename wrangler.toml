@@ -1,0 +1,8 @@
+name = "gh-starred-repos-feed"
+type = "webpack"
+
+account_id = "69ac6123a5f85c72102bb70ac9652da5"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-02-26"
